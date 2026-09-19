@@ -8,8 +8,7 @@ CIS 4120 (Intro to HCI) HW5 at Penn, Spring 2026. The course is over and the rep
 - `src/main.5176.tsx`: the React root (StrictMode + BrowserRouter + `Port5176App`).
 - `src/port5176/Port5176App.tsx`: the whole prototype in one component (~1240 lines). It holds the types, the `reqTabs`/`reqMeta` for tabs `Req 1` to `Req 10`, case state, upload, evidence linking, the review matrix and routing.
 - `src/port5176/port5176.css`: the prototype styles. `src/styles/global.css` holds the base resets and tokens.
-- `docs/DEPENDENCIES.md`: the Dependabot grouping and the `overrides` policy.
-- `.github/dependabot.yml`: weekly npm updates, grouped into `npm-minor-and-patch` and `npm-majors`.
+- `docs/DEPENDENCIES.md`: the `overrides` policy. There is no Dependabot version-update config.
 
 ## Legacy untracked code (gotcha)
 
@@ -40,5 +39,5 @@ npm run lint       # eslint . -- errors out: no eslint.config.js exists
 - `npm run preview` does not render the app. The dynamic import in `index.html` means the production bundle has only the loader. Use `npm run dev` for demos and grading.
 - `pdf-lib` and `pdfjs-dist` are declared in `package.json`, but no tracked file imports them.
 - Do not lower the floors in the `package.json` `overrides` block without checking the advisories (see `docs/DEPENDENCIES.md`). `npm audit` should report 0 vulnerabilities.
-- Dependabot majors are grouped into one PR. Each one needs `npm ci && npm run build` to pass before merge.
+- A major dependency bump needs `npm ci && npm run build` to pass before it is merged.
 - The README keeps the owner's standard skeleton: an AI-assistance acknowledgment, "Coursework; no license granted", and Author "Can Duru — canduru.net". Keep those sections when editing it.
