@@ -41,3 +41,12 @@ npm run lint       # eslint . -- errors out: no eslint.config.js exists
 - Do not lower the floors in the `package.json` `overrides` block without checking the advisories (see `docs/DEPENDENCIES.md`). `npm audit` should report 0 vulnerabilities.
 - A major dependency bump needs `npm ci && npm run build` to pass before it is merged.
 - The README keeps the owner's standard skeleton: an AI-assistance acknowledgment, "Coursework; no license granted", and Author "Can Duru — canduru.net". Keep those sections when editing it.
+
+## Shared local capacity
+
+The package build and validation commands use the optional Mini helper at
+`~/Developer/personal/mac-mini/validation-economy` for CPU/RAM admission.
+Use the usual package commands directly, without an outer lockf. Matching clean
+validation can reuse a pass; commands producing build or render output always run.
+The `:local` scripts hold the original recipes for the wrapper and remote builders.
+Without the helper, the original command still runs. Existing tool caches remain.
