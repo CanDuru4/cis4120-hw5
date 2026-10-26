@@ -1,5 +1,7 @@
 @AGENTS.md
 
+Validation scope, shared capacity and remote execution follow AGENTS.md. Command examples below do not require a full-suite rerun for every edit.
+
 ## Claude Code
 
 - `node_modules` is usually absent in this checkout; run `npm ci` before the `npm run build` check.

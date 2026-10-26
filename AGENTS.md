@@ -50,3 +50,10 @@ Use the usual package commands directly, without an outer lockf. Matching clean
 validation can reuse a pass; commands producing build or render output always run.
 The `:local` scripts hold the original recipes for the wrapper and remote builders.
 Without the helper, the original command still runs. Existing tool caches remain.
+
+## Validation placement and reuse (owner update 2026-10-26)
+
+- Follow the global Claude/Codex test policy and `~/Developer/personal/mac-mini/validation-economy/README.md` and `COVERAGE.md`. Focus first; full coverage only when the changed inputs require it. Docs-only policy edits need no application suite or deploy.
+- Call this repo's integrated check/build entry points directly, without an outer `lockf`. Keep worker ceilings; reserve separate heavy phases and diagnose retention by physical footprint, including compressed memory.
+- Compatible committed-source Python/Node checks may use the owner-approved Brain `remote-run.py`, independently of the Mini, within its aggregate 2 CPU / 4 GiB hard cap. Check the repo's pinned runtime and export restrictions first; use the actual focused command with bounded workers. No credentials, production data, signing keys or uncommitted files may be sent.
+- Reuse only supported receipts with matching source, coverage, dependencies, runtime/platform and relevant environment. Preserve passed unaffected batches; count remote results only when the owning gate aggregates them. Receipts do not replace required build artifacts or OS/device/browser proof. Split or offload an impossible reservation instead of waiting indefinitely; only stop your own obsolete jobs.
