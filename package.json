@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite --port 5176 --strictPort",
     "dev:5176": "vite --port 5176 --strictPort",
-    "build": "tsc -b && vite build",
+    "build": "sh scripts/capacity.sh run build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:local": "tsc -b && vite build"
   },
   "keywords": [],
   "author": "",
